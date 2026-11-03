@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pi Backup (rclone)</title>
+<style>
+  body { font: 16px/1.6 -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 42rem;
+         margin: 4rem auto; padding: 0 1.25rem; color: #1a1a1a; }
+  h1 { font-size: 1.6rem; margin-bottom: .25rem; }
+  .sub { color: #666; margin-top: 0; }
+  code { background: #f3f3f3; padding: .1rem .3rem; border-radius: 3px; font-size: .9em; }
+  footer { margin-top: 3rem; border-top: 1px solid #eee; padding-top: 1rem; color: #666;
+           font-size: .9rem; }
+</style>
+</head>
+<body>
+  <h1>Pi Backup (rclone)</h1>
+  <p class="sub">A personal, single-user backup tool.</p>
+
+  <p><strong>Pi Backup</strong> is a private backup utility that runs on its owner's Raspberry&nbsp;Pi
+     and uploads a copy of that machine's home directory to the owner's own Google Drive account,
+     once a day, using <a href="https://rclone.org">rclone</a>.</p>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>Copies files from the local machine to a folder in the owner's Google Drive.</li>
+    <li>Needs access only to the files it created itself: it requests the
+        <code>drive.file</code> scope, so it cannot read, modify or delete anything else in the
+        account.</li>
+    <li>Stores nothing on any third-party server; there is no backend service and no other user.</li>
+    <li>Is not distributed, published or offered as a service to anyone else — it is used by a single
+        person, its author, on his own account.</li>
+  </ul>
+
+  <h2>Data handling</h2>
+  <p>Files are transmitted directly from the Raspberry&nbsp;Pi to Google Drive over HTTPS. Credentials
+     are kept locally on that machine. See the
+     <a href="./privacy.html">privacy policy</a> for the details.</p>
+
+  <footer>
+    Pi Backup (rclone) — personal software.
+    <a href="./privacy.html">Privacy policy</a>
+  </footer>
+</body>
+</html>
